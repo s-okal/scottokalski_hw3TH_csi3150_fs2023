@@ -1,0 +1,342 @@
+/* Used https://layout.bradwoods.io/customize for a large part of CSS layout design. */
+body {
+  background-color: black;
+}
+
+section {
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}
+
+.downArrow:hover + .hide {
+  display: block;
+  font-size: 30px;
+  color: red;
+}
+
+h1 {
+  align-items: center;
+  color: rgb(254, 225, 0);
+  font-size: 9ch;
+}
+
+h4 {
+  color: yellow;
+}
+
+button {
+  background-color: orange;
+  padding: 15px 20px;
+  text-align: center;
+  color: black;
+}
+
+button:hover {
+  background-color: rgb(156, 111, 43);
+}
+
+#page1 {
+  background-image: url("../img/mcdonaldsBackground1.jpg");
+  background-size: cover;
+  /* align-items: center; */
+}
+
+#p1CenterBox {
+  margin: auto;
+  width: 50%;
+  transform: translate(0, 20%);
+
+  padding: 0px;
+  text-align: center;
+  font-size: x-large;
+  color: white;
+}
+
+#page2 {
+  background-image: url("../img/mcdonaldsBackground2.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.columnContainer {
+  padding-top: 15%;
+  padding-left: 15%;
+}
+
+.column1 {
+  /* transform: translate(25%, 25%); */
+  font-size: xx-large;
+  text-align: center;
+  vertical-align: center;
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 300px;
+}
+
+.column2 {
+  /* transform: translate(25%, 25%); */
+  background-color: clea;
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 300px;
+}
+
+#page3 {
+  background-image: url("../img/mcdonaldsBackground3.jpg");
+  background-size: cover;
+}
+
+#p3Title {
+  padding: 10px;
+  text-align: center;
+}
+
+#p3ImageContainer {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.arrowContainer {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+#p3Image {
+  width: 500px;
+  padding: 20px;
+  height: 550px;
+  object-fit: cover;
+}
+
+#p3Button {
+  transform: translate(0, 50%);
+  display: block;
+  margin: auto;
+}
+
+#page4 {
+  background-image: url("../img/mcdonaldsBackground4.jpg");
+  background-size: cover;
+
+  /* width: 100%; */
+  box-sizing: border-box;
+
+  /* display: grid; */
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.column1b {
+  /* transform: translate(25%, 25%); */
+  font-size: xx-large;
+  text-align: center;
+  vertical-align: center;
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 425px;
+}
+
+.column2b {
+  /* transform: translate(25%, 25%); */
+  background-color: clea;
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 425px;
+}
+
+#page5 {
+  background-image: url("../img/mcdonaldsBackground5.jpg");
+  background-size: cover;
+}
+
+#p5CircleContainer {
+  padding-top: 15%;
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* Create separate grid areas within circle */
+.bigTextInCircle {
+  width: 100%;
+  display: grid;
+  grid:
+    "topSec" 1fr
+    "bottomSec" 1fr
+    / 1fr;
+  gap: 8px;
+}
+
+/* Sections for top and bottom text rows in circles */
+.topSec {
+  color: red;
+  font-size: 1.875em;
+  grid-area: topSec;
+}
+.bottomSec {
+  grid-area: bottomSec;
+}
+
+/* Circles used for page 5 */
+#circle {
+  width: 250px;
+  height: 250px;
+  font-size: 30px;
+  border: 1px solid black;
+  background-color: #fee100c0;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#page6 {
+  background-image: url("../img/mcdonaldsBackground6.jpg");
+  background-size: cover;
+}
+
+.p6LayoutContainer {
+  transform: translate(0, 25%);
+  /* padding: 10px; */
+  text-align: center;
+  font-size: x-large;
+  color: white;
+  width: 100%;
+
+  display: grid;
+  grid:
+    "cirPic" 240px
+    "para" 120px
+    "ronName" 120px
+    "arrowDown" 120px
+    / auto;
+  gap: 8px;
+}
+
+.cirPic {
+  grid-area: cirPic;
+  /* height: 200px;
+  width: 200px; */
+  border-radius: 50%;
+}
+.para {
+  grid-area: para;
+}
+.ronName {
+  grid-area: ronName;
+}
+.arrowDown {
+  grid-area: arrowDown;
+}
+
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(10px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+
+  90% {
+    transform: translateX(-8px);
+  }
+}
+
+/* Overrides to pictures maximum height (550px) */
+#page7 {
+  height: 550px;
+}
+
+.p7Row {
+  display: flex;
+}
+
+/* .p7Row:hover {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+} */
+
+.p7Column {
+  flex: 33.33%;
+  height: 100%;
+  width: 25%;
+}
+
+#p7Image {
+  width: 500px;
+  height: 550px;
+  object-fit: cover;
+}
+
+.leftArrow:hover {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.rightArrow:hover {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+#page8 {
+  height: 550px;
+  background-image: url("../img/mcdonaldsBackground7.jpg");
+  background-size: cover;
+}
+
+.p8Container {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  display: grid;
+  grid:
+    "col1 col2" 1fr
+    / 1fr 1fr;
+  gap: 8px;
+}
+
+.col1 {
+  grid-area: col1;
+}
+.col2 {
+  grid-area: col2;
+  transform: translate(0, 25%);
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  gap: 8px;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
